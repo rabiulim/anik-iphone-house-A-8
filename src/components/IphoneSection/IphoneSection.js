@@ -5,7 +5,7 @@ import './IphoneSection.css'
 const IphoneSection = () => {
     const [iphones, setIphones] = useState([])
     const [iphoneCart, setIphoneCart] = useState([])
-    const [y, setY] = useState({})
+    const [selectedIphone, setSelectedIphone] = useState({})
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -26,7 +26,7 @@ const IphoneSection = () => {
             return
         }
         const x = Math.floor(Math.random() * iphoneCart.length)
-        setY(iphoneCart[x])
+        setSelectedIphone(iphoneCart[x])
     }
     return (
 
@@ -51,7 +51,7 @@ const IphoneSection = () => {
                         <button onClick={reset}>
                             <p>reset</p>
                         </button>
-                        <p>{y.phone_name}</p>
+                        <p>Your Selected Phone:{selectedIphone.phone_name}</p>
                     </div>
                 </div>
             </div>
