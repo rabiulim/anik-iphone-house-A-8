@@ -15,6 +15,8 @@
     background-color: beige;
     padding: 10px;
     border-radius: 10px;
+    border: 2px solid salmon;
+    text-align: center;
 }
 
 .cart-container{
@@ -22,6 +24,20 @@
     top: 0;
 }
 
+.order-btn{
+    display: grid;
+    margin: 5px;
+    gap: 10px;
+}
+.order-btn button{
+    border-radius: 10px;
+    background-color: aqua;
+    color: orangered;
+    text-align: center;
+}
+.order-btn p{
+    font-size: 20px;
+}
 @media screen and (max-width:400px) {
     .all-iphone-container{
         grid-template-columns: 1fr;

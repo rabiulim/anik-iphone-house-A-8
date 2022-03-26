@@ -32,12 +32,14 @@ const IphoneSection = () => {
                         iphoneCart.map(SinglePhone => <Cart SingleIphone={SinglePhone} key={SinglePhone.id}></Cart>)
 
                     }
-                    <button>
-                        <p>choose one</p>
-                    </button>
-                    <button>
-                        <p>reset</p>
-                    </button>
+                    <div className='order-btn'>
+                        <button>
+                            <p>choose one</p>
+                        </button>
+                        <button>
+                            <p>reset</p>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
