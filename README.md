@@ -1,6 +1,6 @@
 # Anik Iphone House
 
-## Click to browse The website (https://github.com/facebook/create-react-app)
+## [Anik Iphone House Link](https://anik-iphone-house.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the link of Anik Iphone House: https://anik-iphone-house.netlify.app/
 
