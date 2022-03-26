@@ -20,7 +20,7 @@
 }
 .cart-btn{
     width: 100%;
-    background: #FFE0B3;
+    background: #f3c47f;
     border: none;
     border-radius: 0px 0px 8px 8px;
     position: absolute;
@@ -28,4 +28,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.iphone-card button:hover{
+    color: orangered;
+}
+.cart-btn P{
+    font-size: 18px;
+    margin-right: 5px;
 }
