@@ -1,6 +1,8 @@
 .all-iphone-container{
     display: grid;
     grid-template-columns: 3.5fr 1.5fr;
+    gap: 10px;
+    margin: 20px;
 }
 
 .single-iphone-container{
@@ -9,6 +11,23 @@
     gap: 10px;
 }
 
-.cart-container{
+.all-cart-container{
     background-color: beige;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart-container{
+    position: sticky;
+    top: 0;
+}
+
+@media screen and (max-width:400px) {
+    .all-iphone-container{
+        grid-template-columns: 1fr;
+    }
+    .single-iphone-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
 }

@@ -12,7 +12,7 @@ const IphoneSection = () => {
     }, [])
 
     const handleAddToCart = (iphone) => {
-        console.log(iphone)
+        // console.log(iphone)
         const newCart = [...iphoneCart, iphone]
         setIphoneCart(newCart)
     }
@@ -23,9 +23,22 @@ const IphoneSection = () => {
                 {
                     iphones.map(iphone => <SingleIphone key={iphone.id} iphone={iphone} handleAddToCart={handleAddToCart} ></SingleIphone>)
                 }
+
             </div>
-            <div className='cart-container'>
-                <Cart iphoneCart={iphoneCart}></Cart>
+            <div className='all-cart-container'>
+                <div className='cart-container'>
+                    <h2>Your Order Summary</h2>
+                    {
+                        iphoneCart.map(SinglePhone => <Cart SingleIphone={SinglePhone} key={SinglePhone.id}></Cart>)
+
+                    }
+                    <button>
+                        <p>choose one</p>
+                    </button>
+                    <button>
+                        <p>reset</p>
+                    </button>
+                </div>
             </div>
         </div>
     );

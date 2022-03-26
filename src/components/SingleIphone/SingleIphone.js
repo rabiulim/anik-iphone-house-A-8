@@ -4,7 +4,7 @@ import React from 'react';
 import './SingleIphone.css'
 const SingleIphone = (props) => {
     const { handleAddToCart } = props;
-    console.log(handleAddToCart)
+    // console.log(handleAddToCart)
     const { price, phone_name, image } = props.iphone;
     return (
         <div className='iphone-card'>
@@ -13,7 +13,7 @@ const SingleIphone = (props) => {
                 <p>{phone_name}</p>
                 <p>Price: ${price}</p>
             </div>
-            <button className='cart-btn' onClick={() => handleAddToCart()}>
+            <button className='cart-btn' onClick={() => handleAddToCart(props.iphone)}>
                 <p>add to cart</p>
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
             </button>

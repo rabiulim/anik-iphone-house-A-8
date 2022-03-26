@@ -1,10 +1,10 @@
 import React from 'react';
-
-const Cart = ({ iphoneCart }) => {
+import './Cart.css'
+const Cart = ({ SingleIphone }) => {
+    console.log(SingleIphone)
     return (
-        <div>
-            <p>iphone order</p>
-            <p> selected price:{iphoneCart.length}</p>
+        <div className='iphone-cart'>
+            <p>{SingleIphone.phone_name}</p>
         </div>
     );
 };
