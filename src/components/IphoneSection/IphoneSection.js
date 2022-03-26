@@ -5,6 +5,7 @@ import './IphoneSection.css'
 const IphoneSection = () => {
     const [iphones, setIphones] = useState([])
     const [iphoneCart, setIphoneCart] = useState([])
+    const [y, setY] = useState({})
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -17,7 +18,18 @@ const IphoneSection = () => {
         setIphoneCart(newCart)
     }
 
+    const reset = () => {
+        setIphoneCart([])
+    }
+    const chooseOne = () => {
+        if (!iphoneCart.length) {
+            return
+        }
+        const x = Math.floor(Math.random() * iphoneCart.length)
+        setY(iphoneCart[x])
+    }
     return (
+
         <div className='all-iphone-container'>
             <div className='single-iphone-container'>
                 {
@@ -33,12 +45,13 @@ const IphoneSection = () => {
 
                     }
                     <div className='order-btn'>
-                        <button>
+                        <button onClick={chooseOne}>
                             <p>choose one</p>
                         </button>
-                        <button>
+                        <button onClick={reset}>
                             <p>reset</p>
                         </button>
+                        <p>{y.phone_name}</p>
                     </div>
                 </div>
             </div>
